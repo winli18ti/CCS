@@ -17,17 +17,17 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         binding.btn1.setOnClickListener {
-            val intent = Intent(this@MainActivity, InputActivity::class.java)
+            val intent = Intent(this@MainActivity, CaesarActivity::class.java)
             startActivity(intent)
         }
 
         binding.btn2.setOnClickListener {
-            val intent = Intent(this@MainActivity, InputActivity::class.java)
+            val intent = Intent(this@MainActivity, AffineActivity::class.java)
             startActivity(intent)
         }
 
         binding.btn3.setOnClickListener {
-            val intent = Intent(this@MainActivity, InputActivity::class.java)
+            val intent = Intent(this@MainActivity, VigenereActivity::class.java)
             startActivity(intent)
         }
 

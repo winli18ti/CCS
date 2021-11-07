@@ -1,3 +1,58 @@
 <resources>
     <string name="app_name">CCS</string>
+    <string name="caesar_encrypt">Enkripsi caesar cipher merupakan sebuah enkripsi dengan proses perpindahan hurufnya bergeser kedepan dengan menggunakan kunci sebagai patokan jumlah perpindahan.\n\n
+Caesar cipher memiliki rumus enkripsi berupa :\n\n
+ciphertext = ( plaintext + key ) % 26\n\n
+Keterangan :\n
+ciphertext = hasil enkripsi berupa angka yang dikaitkan dengan posisi huruf abjad\n
+plaintext = berupa angka yang dikaitkan dengan posisi huruf abjad\n
+key = kunci dalam perpindahan huruf, berupa angka\n
+26 = merupakan angka tetap yang menandakan jumlah abjad</string>
+    <string name="caesar_decrypt">Dekripsi caesar cipher merupakan sebuah dekripsi dengan proses perpindahan hurufnya bergeser kebelakang dengan menggunakan kunci sebagai patokan jumlah perpindahan.\n\n
+Caesar cipher memiliki rumus dekripsi berupa :\n\n
+plaintext = ( ciphertext - key ) % 26\n\n
+Keterangan :\n
+plaintext = hasil dekripsi berupa angka yang dikaitkan dengan posisi huruf abjad\n
+ciphertext = berupa angka yang dikaitkan dengan posisi huruf abjad\n
+key = kunci dalam perpindahan huruf, berupa angka\n
+26 = merupakan angka tetap yang menandakan jumlah abjad</string>
+    <string name="affine_encrypt">Enkripsi affine cipher merupakan sebuah enkripsi yang memiliki 2 buah kunci dalam melakukan enkripsi kata, berupa multiplicative key dan additive key.\n
+Additive key merupakan kunci yang merubah susunan abjad yang berpindah kedepan sesuai dengan angka dari kunci tersebut.\n
+Multiplicative key merupakan perpindahan huruf ke huruf dari susunan abjad yang telah dirubah dari additive key. Dengan jarak huruf ke huruf tersebut didasari dari angka kunci tersebut. Multiplicative key harus menggunakan angka relatif prima.\n\n
+Affine cipher memiliki rumus enkripsi berupa :\n\n
+C = mP + b (mod n)\n\n
+Keterangan :\n
+C = ciphertext\n
+m = multiplicative key (bilangan relatif prima)\n
+P = plaintext\n
+b = additive key (jumlah pergeseran)\n
+n = ukuran abjad</string>
+    <string name="affine_decrypt">Dekripsi affine cipher merupakan sebuah dekripsi yang memiliki 2 buah kunci dalam melakukan enkripsi kata, berupa multiplicative key dan additive key.\n\n
+Additive key pada dekripsi affine cipher merupakan kunci yang merubah susunan abjad dengan melakukan pengurangan dengan angka dari huruf cipher.\n\n
+Multiplicative key pada dekripsi affine cipher harus dilakukan inversi sebelum dilakukannya dekripsi.\n\n
+Affine cipher memiliki rumus dekripsi berupa :\n\n
+P = m^-1 (C - b)(mod n)\n\n
+Keterangan :\n
+P = plaintext\n
+m = multiplicative key (bilangan relatif prima)\n
+C = ciphertext\n
+b = additive key (jumlah pergeseran)\n
+n = ukuran abjad</string>
+    <string name="vigenere_cipher_1">Enkripsi vigenere cipher merupakan enkripsi yang memiliki sebuah kunci berupa kata maupun huruf. Kunci tersebut akan dipasangkan ke dalam plaintext. Dan jika plaintext lebih banyak huruf dibandingkan dengan kunci, maka kunci akan ditambahkan dengan pengulangan kunci tersebut. Untuk proses enkripsinya, huruf plaintext yang akan dienkripsi ke cipher dapat dilihat dari perbedaan pergeseran huruf kunci dengan huruf plaintext, contoh lebih jelas dapat dilihat dari tabel.</string>
+    <string name="vigenere_cipher_2">Dapat dicontohkan misalnya plaintext adalah E dan kunci adalah F, maka kita melihat huruf mana yang menjadi titik silangnya. Sehingga hasil ciphernya menjadi J.\n\n
+Vigenere cipher memiliki rumus enkripsi berupa :\n\n
+Ci = ( Pi + Ki ) mod n\n\n
+Keterangan :\n
+Ci = hasil huruf enkripsi ke ciphertext\n
+Pi = salah satu huruf dari plaintext yang akan di enkripsi\n
+Ki = salah satu huruf kunci yang dipasangkan dengan huruf plaintext\n
+n = jumlah abjad</string>
+    <string name="vigenere_decrypt">Dekripsi vigenere cipher merupaka dekripsi yang memiliki kunci berupa kata dan huruf, proses dekripsi hampir sama dengan enkripsi, hanya melihat dari persilangan antara salah satu huruf ciphertext dan huruf pasangan kuncinya.\n\n
+Vigenere cipher memiliki rumus dekripsi berupa :\n\n
+Pi = ( Ci - Ki ) mod n\n\n
+Keterangan :\n
+Pi = salah satu huruf dari plaintext yang akan di enkripsi\n
+Ci = hasil huruf enkripsi ke ciphertext\n
+Ki = salah satu huruf kunci yang dipasangkan dengan huruf plaintext\n
+n = jumlah abjad</string>
 </resources>
