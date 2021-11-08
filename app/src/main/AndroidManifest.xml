@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CCS">
         <activity
+            android:name=".ColumnarTranspositionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ScytaleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RailFenceActivity"
+            android:exported="true" />
+        <activity
             android:name=".AffineActivity"
             android:exported="true" />
         <activity

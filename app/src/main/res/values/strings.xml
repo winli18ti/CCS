@@ -55,4 +55,6 @@ Pi = salah satu huruf dari plaintext yang akan di enkripsi\n
 Ci = hasil huruf enkripsi ke ciphertext\n
 Ki = salah satu huruf kunci yang dipasangkan dengan huruf plaintext\n
 n = jumlah abjad</string>
+    <string name="rail_fence_encrypt">X</string>
+    <string name="rail_fence_decrypt">X</string>
 </resources>

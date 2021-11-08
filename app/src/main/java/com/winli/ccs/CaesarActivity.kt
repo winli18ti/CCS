@@ -10,7 +10,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.winli.ccs.algorithm.Caesar
-import com.winli.ccs.algorithm.Vigenere
 import com.winli.ccs.databinding.ActivityCaesarBinding
 
 class CaesarActivity : AppCompatActivity() {

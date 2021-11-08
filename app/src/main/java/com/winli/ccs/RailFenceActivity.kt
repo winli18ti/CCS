@@ -9,42 +9,40 @@ import android.transition.TransitionManager
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
-import com.winli.ccs.algorithm.Affine
-import com.winli.ccs.databinding.ActivityAffineBinding
+import com.winli.ccs.algorithm.RailFence
+import com.winli.ccs.databinding.ActivityRailFenceBinding
 
-class AffineActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityAffineBinding
+class RailFenceActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityRailFenceBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAffineBinding.inflate(layoutInflater)
+        binding = ActivityRailFenceBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        supportActionBar?.title = "Affine Cipher"
+        supportActionBar?.title = "Rail Fence Cipher"
 
         val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
 
         with(binding) {
             btnEncrypt.setOnClickListener {
                 val input = etInput.text.toString()
-                val multi = etMulti.text.toString()
-                val add = etAdd.text.toString()
-                if (isEmpty(input, multi, add)) {
+                val key = etKey.text.toString()
+                if (isEmpty(input, key)) {
                     return@setOnClickListener
                 } else {
-                    val output = Affine.encrypt(input, multi.toInt(), add.toInt())
+                    val output = RailFence.encrypt(input, key.toInt())
                     etOutput.setText(output)
                 }
             }
 
             btnDecrypt.setOnClickListener {
                 val input = etInput.text.toString()
-                val multi = etMulti.text.toString()
-                val add = etAdd.text.toString()
-                if (isEmpty(input, multi, add)) {
+                val key = etKey.text.toString()
+                if (isEmpty(input, key)) {
                     return@setOnClickListener
                 } else {
-                    val output = Affine.decrypt(input, multi.toInt(), add.toInt())
+                    val output = RailFence.decrypt(input, key.toInt())
                     etOutput.setText(output)
                 }
             }
@@ -82,8 +80,7 @@ class AffineActivity : AppCompatActivity() {
 
             btnClear.setOnClickListener {
                 etInput.setText("")
-                etMulti.setText("")
-                etAdd.setText("")
+                etKey.setText("")
                 etOutput.setText("")
             }
 
@@ -112,7 +109,7 @@ class AffineActivity : AppCompatActivity() {
         }
     }
 
-    private fun isEmpty(input: String, multi: String, add: String): Boolean {
+    private fun isEmpty(input: String, key: String): Boolean {
         if (input.isEmpty()) {
             Snackbar.make(
                 binding.root,
@@ -122,28 +119,10 @@ class AffineActivity : AppCompatActivity() {
                 .show()
             return true
         }
-        if (multi.isEmpty()) {
+        if (key.isEmpty()) {
             Snackbar.make(
                 binding.root,
-                "Multiplicative Key is empty.",
-                Snackbar.LENGTH_SHORT
-            )
-                .show()
-            return true
-        }
-        if (multi.toInt() != 1 && !Affine.coPrime(multi.toInt(), 26)) {
-            Snackbar.make(
-                binding.root,
-                "Please insert any odd number from 1 to 25, except 13, in multi.",
-                Snackbar.LENGTH_SHORT
-            )
-                .show()
-            return true
-        }
-        if (add.isEmpty()) {
-            Snackbar.make(
-                binding.root,
-                "Additive Key is empty.",
+                "Key is empty.",
                 Snackbar.LENGTH_SHORT
             )
                 .show()

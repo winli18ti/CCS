@@ -1,8 +1,8 @@
 package com.winli.ccs
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.winli.ccs.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -32,17 +32,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btn4.setOnClickListener {
-            val intent = Intent(this@MainActivity, InputActivity::class.java)
+            val intent = Intent(this@MainActivity, RailFenceActivity::class.java)
             startActivity(intent)
         }
 
         binding.btn5.setOnClickListener {
-            val intent = Intent(this@MainActivity, InputActivity::class.java)
+            val intent = Intent(this@MainActivity, ScytaleActivity::class.java)
             startActivity(intent)
         }
 
         binding.btn6.setOnClickListener {
-            val intent = Intent(this@MainActivity, InputActivity::class.java)
+            val intent = Intent(this@MainActivity, ColumnarTranspositionActivity::class.java)
             startActivity(intent)
         }
     }

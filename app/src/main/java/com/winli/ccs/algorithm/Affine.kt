@@ -43,7 +43,7 @@ object Affine {
 
     private fun modularMultiplicativeInverse(a: Int, m: Int): Int {
         for (i in 1 until m)
-            if (((a%m) * (i%m)) % m == 1)
+            if (((a % m) * (i % m)) % m == 1)
                 return i
         return 1
     }
