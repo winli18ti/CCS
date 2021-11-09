@@ -234,9 +234,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/expand_encrypt"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title_encrypt">
@@ -253,7 +253,7 @@
 
                 <ImageView
                     android:layout_width="300dp"
-                    android:layout_height="150dp"
+                    android:layout_height="133dp"
                     android:layout_marginTop="16dp"
                     android:src="@drawable/columnar_transposition"
                     app:layout_constraintEnd_toEndOf="parent"
