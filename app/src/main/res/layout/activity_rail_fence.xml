@@ -242,6 +242,7 @@
                 app:layout_constraintTop_toBottomOf="@id/title_encrypt">
 
                 <TextView
+                    android:id="@+id/tv_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/rail_fence_encrypt"
@@ -249,6 +250,15 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/rail_fence"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_1" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 

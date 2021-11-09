@@ -55,6 +55,18 @@ Pi = salah satu huruf dari plaintext yang akan di enkripsi\n
 Ci = hasil huruf enkripsi ke ciphertext\n
 Ki = salah satu huruf kunci yang dipasangkan dengan huruf plaintext\n
 n = jumlah abjad</string>
-    <string name="rail_fence_encrypt">X</string>
-    <string name="rail_fence_decrypt">X</string>
+    <string name="rail_fence_encrypt">Untuk proses enkripsi rail fence cipher, akan ada sebuah kunci yang menandakan berapa baris yang akan dipakai untuk pembuatan huruf zig-zag. pertama menuliskan plaintext secara diagonal ke bawah, dan diubah ke atas jika bagian dasar sudah dicapai. Dan akan terus diulang hingga seluruh huruf plaintext telah dipasangkan semua. Lalu, untuk mendapatkan baris ciphertext, sebuah kumpulan huruf akan digabung perbarisnya dan akan membuat sebuah garis panjang.\n\n
+Contoh :</string>
+    <string name="rail_fence_decrypt">Untuk melakukan dekripsi, kita perlu menyusun kembali jajaran ciphertext tersebut. Untuk membuat kembali susunan zig-zag, perlu diketahui berapa jumlah huruf pada baris pertama. Dengan menggunakan rumus :\n\n
+K = L / 2 x (N - 1)\n\n
+Keterangan :\n
+K = jumlah huruf baris pertama dan baris terakhir\n
+L = jumlah total huruf dari ciphertext\n
+N = Kunci\n\n
+Jika sudah mendapatkan K, maka kita bisa membentuk jajaran susunan zig-zag.</string>
+    <string name="scytale_encrypt_1">Untuk melakukan enkripsi, kita perlu menyiapkan sebuah tangkai dan sebuah kertas yang panjang dengan lebar hanya setinggi satu huruf. Lalu, lilitkan kertas tersebut ke tangkai. Jika sudah, ambil sebuah plaintext yang ingin dienkripsi dan tulis ke dalam kertas tersebut seperti pada gambar dibawah ini :</string>
+    <string name="scytale_encrypt_2">Dan ketika melepas lilitan kertas dari tangkai, jika kita panjangkan kertas tersebut, akan terbentuk sebauh barisan panjang ciphertext.</string>
+    <string name="scytale_decrypt">Untuk proses dekripsinya, kita hanya perlu melilitkan kembali kertas tersebut pada tangkai untuk bisa membaca plaintextnya.</string>
+    <string name="columnar_transposition_encrypt">Dalam enkripsi columnar transposition, urutan-urutan huruf akan diatur ulang untuk mendapatkan cipher-teks. Pesan ditulis dalam baris dengan panjang tetap, dan kemudian dibacakan lagi kolom demi kolom, dan kolom dipilih dalam beberapa urutan acak. Lebar baris dan permutasi kolom biasanya ditentukan oleh kata kunci. Setiap spasi kosong diisi dengan nol atau dikosongkan maupun bisa dengan menggunakan garis bawah ( _ ). Terakhir, pesan dibacakan dalam kolom, dengan urutan yang ditentukan oleh kata kunci.</string>
+    <string name="columnar_transposition_decrypt">Untuk melakukan dekripsi, penerima harus menghitung panjang kolom dengan membagi panjang pesan dengan panjang kunci. Lalu, tulis pesan dalam kolom lagi, dan urutkan ulang kolom dengan mengubah kata kuncinya.</string>
 </resources>

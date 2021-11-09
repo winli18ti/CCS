@@ -261,7 +261,6 @@
                     app:layout_constraintTop_toBottomOf="@id/tv_1" />
 
                 <TextView
-                    android:id="@+id/tv_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
